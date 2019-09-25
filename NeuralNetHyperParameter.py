@@ -15,15 +15,12 @@ class OptimalNeuralNet(object):
     generation = None
     activation_functions = ['relu', 'selu', 'sigmoid', 'tanh', 'elu', 'softplus', 'softsign',
                             'hard_sigmoid', 'linear','softmax']
-    optimizer = ['SGD']
-    """, 'RMSprop', 'Adagrad', 'Adadelta', 'Adam', 'Adamax', 'Nadam']"""
-    regressor_loss = ['mean_squared_error']
-    """, 'mean_absolute_error', 'mean_absolute_percentage_error',
-                      'mean_squared_logarithmic_error', 'squared_hinge', 'hinge', 'logcosh']"""
+    optimizer = ['SGD', 'RMSprop', 'Adagrad', 'Adadelta', 'Adam', 'Adamax', 'Nadam']
+    regressor_loss = ['mean_squared_error', 'mean_absolute_error', 'mean_absolute_percentage_error',
+                      'mean_squared_logarithmic_error', 'squared_hinge', 'hinge', 'logcosh']
     classifier_loss = ['categorical_hinge', 'categorical_crossentropy', 'sparse_categorical_crossentropy',
                        'binary_crossentropy', 'kullback_leibler_divergence', 'poisson', 'cosine_proximity']
-    metrics = ['mae']
-    """, 'sparse_categorical_accuracy']"""
+    metrics = ['mae', 'sparse_categorical_accuracy']
 
     def classification_accuracy_percentage(test_y, pred):
         N = len(test_y) 
